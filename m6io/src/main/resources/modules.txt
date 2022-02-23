@@ -1,0 +1,5 @@
+Strings
+Numbers
+Dates and Times
+Arrays and Collections
+Files and Directories
