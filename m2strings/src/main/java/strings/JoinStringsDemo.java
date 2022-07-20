@@ -39,7 +39,7 @@ public class JoinStringsDemo {
 
     public static String joinWithJoiner(String delimiter, String... args) {
         var joiner = new StringJoiner(delimiter, "{", "}");
-        for (String arg : args) {
+        for(String arg : args) {
             joiner.add(arg);
         }
         return joiner.toString();
@@ -48,9 +48,16 @@ public class JoinStringsDemo {
     public static String joinWithStream(String delimiter, String... args) {
         return Stream.of(args)
                 .filter(Objects::nonNull)
-                .filter(""::equals)
+                .filter(s -> !s.isEmpty())
                 .collect(Collectors.joining(delimiter));
     }
+
+
+
+
+
+
+
 
 
 }
