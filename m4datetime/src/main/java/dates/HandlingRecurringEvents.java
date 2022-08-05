@@ -22,7 +22,7 @@ public class HandlingRecurringEvents {
 
         List<LocalDate> fridays = new ArrayList<>();
 
-        while(firstFriday.isBefore(stop)) {
+        while(firstFriday.isBefore(stop) || firstFriday.isEqual(stop)) {
             fridays.add(firstFriday);
             firstFriday = firstFriday.plusWeeks(1); // move to the next Friday
         }
